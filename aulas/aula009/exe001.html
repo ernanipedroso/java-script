@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aprendendo a usar o DOM</title>
+    <style>
+      body, html{
+        background-color: rgb(123, 123, 212);
+        color: white;
+        font: normal 18pt arial ;
+
+      }
+    </style>
+</head>
+<body>
+    <h1>iniciando estudos DOM</h1> 
+
+    <p name ="nani">aqui vai para resultado</p>
+
+    <p >aprendendo a usar o <strong>DOM</strong> em JavaScript. </p>
+
+    <div id="msg">clique em mim</div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByName('nani')[0]
+        var d = window.document.querySelector('div#msg')
+
+        window.document.write('esta escrito assim: ' +p1.innerHTML)
+        p1.style.color = 'blue'
+        corpo.style.backgroundColor = 'lightgrey'
+        corpo.style.color = 'black'
+        
+        
+    
+    </script>
+
+</body>
+</html>
