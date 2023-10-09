@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>sistema de velocidade</h1>
+    velocidade do carro <input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="verificar" onclick="caucular()">
+    <div id="res">
+        
+    </div>
+
+    <script>
+        function caucular(){
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>sua velocidade e de <strong>${vel} km/h</strong></p>`
+            if (vel > 90){
+                res.innerHTML += 'você ultrapassou o limite de velocidade, MULTADO!'
+            }else{
+                res.innerHTML += 'respeite o limite de velocidade, use sempre o sinto de segurança'
+            }
+         
+
+        }
+    </script>
+</body>
+</html>

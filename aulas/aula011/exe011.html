@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nacionalidades</title>
+</head>
+<body>
+    <h1>sua  nacionalidade </h1>
+    escreva o nome do seu pais de origem aqui:<input type="text" name="txtvel" id="txtvel">
+    <input type="button" value="verificar" onclick="click()">
+    <div id="res">
+        
+    </div>
+
+    <script>
+
+        function click(){
+        var nac = window.document.querySelector('input#txtvel')
+        var res = window.document.querySelector('div#res')
+        var env = Text (txt.value)
+
+        res.innerHTML = `<p>você e um cidadão ${env} seja bem vindo</p>`
+
+        if (nac == brasil ){
+                res.innerHTML += 'voce e brasileiro, seja bem vindo!'
+            }else{
+                res.innerHTML += 'you are a foreigner, wellcome!'
+            }
+        
+        }
+
+    </script>
+</body>
+</html>
