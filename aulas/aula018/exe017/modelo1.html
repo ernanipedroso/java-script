@@ -7,19 +7,23 @@
     <link rel="stylesheet" href="estilo/style.css">
 
 </head>
-<body onload="carregar()">
+<body>
     <header>
         <h1>
-            Hora do Dia
+            Tabuada
         </h1>
     </header>
 
     <section>
-        <div id="msg">
-           
+        <div>
+           <p>Numero: <input type="number" name="num" id="txtn">
+
+           <input type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
         </div>
-        <div id="foto">
-          <img id="imagem" src="../aula012ex/imagens/foto-manha.jpg" alt="">
+        <div>
+         <select name="Tabuada" id="seltab" size="10" >
+                <option>Digite um numero acima</option>
+         </select>
         </div>
     </section>
 
