@@ -21,9 +21,27 @@
  }
 
 function adicionar(){
-    if(isNumero(num.value) && !inLista(num.value)){
+    if(isNumero(num.value) && !inLista(num.value, valores)){
+        valores.push(Number(num.value))
+        let item = document.createElement('option')
+        item.text = `valor ${num.value} adicionado.`
+        lista.appendChild(item)
+        res.innerHTML = ''
 
     }else{
         window.alert('Valor invalido ou ja encontrado na lista.')
     }
+    num.value = ''
+    num.focus()
 }
+
+  function finalizar(){
+    if (valores.length == 0){
+        window.alert('adicione valores antes de finalizar!')
+    }else{
+        let tot = valores.length
+
+        res.innerHTML = ''
+        res.innerHTML+= `<p> ao todo, temos ${tot} numeros cadastrados.</p>`
+    }
+  }
